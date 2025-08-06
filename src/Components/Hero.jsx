@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "../Assets/profile.jpg";
+import profileImg from "../assets/profile.jpg";
 
 export default function Hero() {
   return (
