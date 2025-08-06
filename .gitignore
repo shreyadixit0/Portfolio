@@ -20,7 +20,12 @@ npm-debug.log*
 # Build output
 dist/
 build/
+Everything up-to-date
 
+C:\Users\HP\OneDrive\Desktop\My Portfolio\My>git add portfolio-backend 
+fatal: pathspec 'portfolio-backend' did not match any files
+
+C:\Users\HP\OneDrive\Desktop\My Portfolio\My>
 # Vite cache
 .vite/
 
