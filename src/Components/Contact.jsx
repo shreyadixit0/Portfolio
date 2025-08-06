@@ -10,7 +10,7 @@ export default function Contact() {
     message: "",
   });
 
-  const [showModal, setShowModal] = useState(false); // ✅ Modal state
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,12 +20,12 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/contact", {
+      await axios.post("https://portfolio-zefs.onrender.com/api/contact", {
         ...formData,
         visitorInfo: navigator.userAgent,
       });
 
-      setShowModal(true); // ✅ Show modal
+      setShowModal(true);
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
       console.error(err);
@@ -47,7 +47,7 @@ export default function Contact() {
       >
         <h2 className="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
 
-        {/* ✅ DaisyUI Modal Popup */}
+        {/* ✅ Modal Popup */}
         {showModal && (
           <dialog open className="modal modal-open">
             <div className="modal-box">
@@ -126,5 +126,3 @@ export default function Contact() {
     </section>
   );
 }
-
-
