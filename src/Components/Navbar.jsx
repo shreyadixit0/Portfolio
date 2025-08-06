@@ -73,7 +73,7 @@ export default function Navbar() {
           tabIndex={0}
           className="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
-          {["home", "about", "Eucation", "skills", "projects", "contact"].map((section) => (
+          {["home", "about", "Education", "skills", "projects", "contact"].map((section) => (
             <li key={section}>
               <Link
                 to={section}
