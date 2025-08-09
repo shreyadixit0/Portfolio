@@ -1,15 +1,15 @@
 import {
   FaTwitter,
-//   FaGitHub,
   FaLinkedin,
   FaBehance,
   FaInstagram,
 } from "react-icons/fa";
+import { Link } from "react-scroll"; // ✅ Added import
 
 export default function Footer() {
   return (
-    <footer className="bg-base-200 text-[#bcbcbc] font-sans pt-12 pb-6">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+    <footer className="bg-base-200 text-[#bcbcbc] font-sans pt-10 pb-6">
+      <div className="max-w-6xl mx-auto px-7 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
         {/* Social Icons */}
         <div className="flex gap-4">
           <a
@@ -48,18 +48,25 @@ export default function Footer() {
 
         {/* Navigation */}
         <ul className="flex flex-wrap justify-center gap-6 text-[16px] font-medium">
-          <li>
-            <a href="#home" className="text-white hover:text-[#baff39] transition">Home</a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-[#baff39] transition">About Me</a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-[#baff39] transition">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-[#baff39] transition">Contact</a>
-          </li>
+          {[
+            { to: "home", label: "Home" },
+            { to: "about", label: "About Me" },
+            { to: "projects", label: "Projects" },
+            { to: "contact", label: "Contact" },
+          ].map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={-70} // adjust for navbar height
+                duration={500}
+                className="cursor-pointer hover:text-[#baff39] transition text-white"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -68,8 +75,8 @@ export default function Footer() {
 
       {/* Copyright */}
       <p className="text-center text-[#888] text-sm">
-        &copy; 2025  <span className="text-white"> Shreya Dixit Portfolio. </span> Crafted with passion and precision.
-
+        &copy; 2025{" "}
+        <span className="text-white">Shreya Dixit Portfolio.</span> Crafted with passion and precision.
       </p>
     </footer>
   );

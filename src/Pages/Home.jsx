@@ -8,18 +8,19 @@ import Projects from "../Components/Projects";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 
-
 export default function Home() {
   return (
-    <>
+    <div className="bg-base-100 text-base-content">
       <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
+      <div className="pt-24 flex flex-col gap-24">
+        <Hero />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 }

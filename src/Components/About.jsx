@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen py-20 px-6 bg-base 100 flex justify-center items-center"
+      className=" px-6 py-20 bg-base-100 flex justify-center items-center"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -58,27 +58,24 @@ export default function About() {
             </div>
           </div>
 
-
           {/* Language */}
           <div className="mt-6">
             <h3 className="text-xl font-semibold mb-3 text-indigo-700">Languages</h3>
             <div className="flex flex-wrap gap-3">
-              {["Hindi", "English", ].map((hobby, index) => (
+              {["Hindi", "English"].map((language, index) => (
                 <motion.span
                   key={index}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-4 py-2 bg-white/60 backdrop-blur-md border border-white/30 rounded-full text-sm font-medium text-indigo-800 shadow-sm"
                 >
-                  {hobby}
+                  {language}
                 </motion.span>
               ))}
             </div>
           </div>
-
         </div>
       </motion.div>
     </section>
   );
 }
-

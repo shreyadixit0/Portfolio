@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-base-100 text-base-content py-20 px-6 flex items-center justify-center"
+      className="bg-base-100 text-base-content py-20 px-6 flex items-center justify-center"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -110,14 +110,16 @@ export default function Contact() {
           <a
             href="https://www.linkedin.com/in/shreya0/"
             className="inline-flex items-center gap-2 hover:text-primary transition"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedin /> LinkedIn
           </a>
           <a
             href="https://github.com/shreyadixit0"
             className="inline-flex items-center gap-2 hover:text-primary transition"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <FaGithub /> GitHub
           </a>
