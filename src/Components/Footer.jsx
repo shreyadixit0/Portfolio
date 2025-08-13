@@ -3,7 +3,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaBehance,
-  FaInstagram,
+  FaGithub
 } from "react-icons/fa";
 import { Link } from "react-scroll";
 
@@ -44,7 +44,7 @@ export default function Footer() {
             },
             {
               href: "https://github.com/shreyadixit0",
-              icon: <FaInstagram className="text-lg" />,
+              icon: <FaGithub className="text-lg" />,
             },
             {
               href: "https://www.behance.net/shreyadixit11",
