@@ -6,8 +6,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-base 100 flex justify-center items-center relative overflow-hidden"
+      className="relative flex justify-center items-center overflow-hidden bg-base-100"
     >
+      {/* Background lines */}
+      <div
+        className="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(-45deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[length:60px_60px] animate-[zoom_10s_linear_infinite]"
+        aria-hidden="true"
+      ></div>
+
+      {/* Content */}
       <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center px-8 py-10">
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
@@ -15,12 +22,12 @@ export default function Hero() {
             Hello, I'm Shreya Dixit
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-white max-w-xl">
+          <p className="mt-6 text-lg sm:text-xl text-base-content max-w-xl">
             A passionate{" "}
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-base-content">
               Full Stack Developer and UI/UX Designer
             </span>{" "}
-            Crafting digital experiences, from front-end beauty to back-end
+            crafting digital experiences, from front-end beauty to back-end
             brilliance.
           </p>
 
@@ -38,8 +45,8 @@ export default function Hero() {
               to="projects"
               smooth={true}
               duration={500}
-              offset={-80} // Fixes navbar overlap
-              className="px-6 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-100 transition cursor-pointer"
+              offset={-80}
+              className="px-6 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-700 hover:text-white transition cursor-pointer"
             >
               View Projects
             </Link>
@@ -55,7 +62,17 @@ export default function Hero() {
           />
         </div>
       </div>
+
+      {/* Keyframes in Tailwind config */}
+      <style>
+        {`
+          @keyframes zoom {
+            0% { background-size: 60px 60px; opacity: 0.6; }
+            50% { background-size: 90px 90px; opacity: 1; }
+            100% { background-size: 60px 60px; opacity: 0.6; }
+          }
+        `}
+      </style>
     </section>
   );
 }
-

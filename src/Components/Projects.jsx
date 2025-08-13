@@ -10,7 +10,7 @@ const projects = [
       "A full-stack web app to track job applications with status, resume preview, and stats dashboard, track all the application in one place.",
     tech: ["React", "MongoDB", "Tailwind CSS", "Daisy UI"],
     github: "https://github.com/shreyadixit0/Job-Application-Tracker",
-    live: "#",
+    // live: "#",
   },
   {
     title: "ResumeX",
@@ -18,7 +18,7 @@ const projects = [
       "ResumeX is a resume screening app that provides an ATS score, suggests improvements, and helps users build stronger resumes with guided feedback.",
     tech: ["React", "Node.js", "Express", "Tailwind CSS", "DaisyUI"],
     github: "https://github.com/shreyadixit0/ResumeX",
-    live: "#",
+    // live: "#",
   },
   {
     title: "Library Management System",
@@ -26,7 +26,7 @@ const projects = [
       "A Library Management System with integrated chatbot support for student queries. Manages book inventory, issue/return tracking, offering interactive experience for both users and admins.",
     tech: ["HTML", "CSS", "Javascript"],
     github: "https://github.com/shreyadixit0/Library-Management-System-",
-    live: "#",
+    // live: "#",
   },
 ];
 
@@ -69,18 +69,18 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm font-medium text-indigo-700 bg-white rounded-lg shadow hover:bg-indigo-50 transition"
+                    className="px-4 py-2 text-sm font-medium text-indigo-700 bg-white rounded-lg shadow hover:bg-indigo-50 transition flex items-center justify-center"
                   >
                     <FaGithub className="inline-block mr-2" /> Code
                   </a>
-                  <a
+                  {/* <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition"
                   >
                     <FaExternalLinkAlt className="inline-block mr-2" /> Live
-                  </a>
+                  </a> */}
                 </div>
               </motion.div>
             ))}

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import profileImg from "../assets/profile.jpg";
 
+
 export default function About() {
   const skills = [
     "React", "Node.js", "Express", "MongoDB", "JavaScript",
@@ -11,15 +12,18 @@ export default function About() {
   return (
     <section
       id="about"
-      className=" px-6 py-20 bg-base-100 flex justify-center items-center"
+      className="px-6 py-20 bg-base-100 flex justify-center items-center"
     >
+
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="max-w-6xl w-full flex flex-col md:flex-row gap-10 items-center backdrop-blur-xl bg-white/5 border border-white/10 shadow-md rounded-2xl p-10"
+        className="max-w-6xl w-full flex flex-col md:flex-row gap-10 items-center backdrop-blur-xl bg-white/5 border border-white/10 shadow-md rounded-2xl p-10 about-card"
       >
+
+
         {/* Profile Image */}
         <motion.img
           initial={{ opacity: 0, scale: 0.8 }}
@@ -35,10 +39,18 @@ export default function About() {
           <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-indigo-600 to-blue-500">
             About Me
           </h2>
-          <p className="text-lg text-white leading-relaxed">
-            I’m <span className="font-semibold text-white">Shreya Dixit</span>, a final-year student pursuing Bachelors of Technology in Computer Science and Engineering at Babu Banarasi Das University.
-            I work as a Full Stack Developer and UI/UX Designer. I enjoy creating web applications that are both functional and user-focused.
-            I am highly organized, manage my time well, and always ensure timely delivery.
+
+          {/* ✅ Fixed text color for light mode */}
+          <p className="text-lg leading-relaxed text-base-content">
+            I’m{" "}
+            <span className="font-semibold text-base-content">
+              Shreya Dixit
+            </span>
+            , a final-year student pursuing Bachelors of Technology in Computer
+            Science and Engineering at Babu Banarasi Das University. I work as
+            a Full Stack Developer and UI/UX Designer. I enjoy creating web
+            applications that are both functional and user-focused. I am highly
+            organized, manage my time well, and always ensure timely delivery.
           </p>
 
           {/* Hobbies */}
@@ -57,6 +69,7 @@ export default function About() {
               ))}
             </div>
           </div>
+
 
           {/* Language */}
           <div className="mt-6">

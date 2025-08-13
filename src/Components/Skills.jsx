@@ -42,7 +42,7 @@ export default function Skills() {
       <div className="max-w-6xl w-full text-center">
         <h2 className="text-4xl font-bold mb-10">My Skills</h2>
 
-        <div className="p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl">
+        <div className="p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl skills-container">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {skills.map((skill, index) => {
               const customClass = `hover-glow-${index}`;
@@ -64,7 +64,7 @@ export default function Skills() {
                   >
                     {skill.icon}
                   </div>
-                  <span className="text-xs sm:text-sm text-white-300">{skill.label}</span>
+                  <span className="text-xs sm:text-sm text-white">{skill.label}</span>
                 </div>
               );
             })}
@@ -73,16 +73,31 @@ export default function Skills() {
 
         {/* Inject scoped CSS for unique hover effects */}
         <style>
-          {skills
-            .map(
-              (skill, index) => `
-              .hover-glow-${index}:hover {
-                box-shadow: 0 0 10px ${skill.hoverColor}, 0 0 20px ${skill.hoverColor}, 0 0 30px ${skill.hoverColor};
-                border-color: ${skill.hoverColor};
-              }
-            `
-            )
-            .join("\n")}
+          {`
+            /* Light mode: make box + text visible */
+            html[data-theme="light"] #skills .skills-container {
+              background: rgba(255, 255, 255, 0.9) !important;
+              border: 1px solid rgba(0, 0, 0, 0.1) !important;
+              color: #000 !important;
+            }
+            html[data-theme="light"] #skills span {
+              color: #000 !important;
+            }
+
+            /* Keep the same hover glow colors in both themes */
+            ${skills
+              .map(
+                (skill, index) => `
+                  .hover-glow-${index}:hover {
+                    box-shadow: 0 0 10px ${skill.hoverColor},
+                                0 0 20px ${skill.hoverColor},
+                                0 0 30px ${skill.hoverColor};
+                    border-color: ${skill.hoverColor};
+                  }
+                `
+              )
+              .join("\n")}
+          `}
         </style>
       </div>
     </section>

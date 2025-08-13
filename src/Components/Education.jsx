@@ -38,14 +38,33 @@ export default function Education() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {educationData.map((edu, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="h-full rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-md p-12 text-left"
-            >
+            // <motion.div
+            //   key={index}
+            //   initial={{ opacity: 0, y: 30 }}
+            //   whileInView={{ opacity: 1, y: 0 }}
+            //   viewport={{ once: true }}
+            //   transition={{ duration: 0.6, delay: index * 0.2 }}
+            //   className="h-full rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-md p-12 text-left"
+            // >
+//             <motion.div
+//   key={index}
+//   initial={{ opacity: 0, y: 30 }}
+//   whileInView={{ opacity: 1, y: 0 }}
+//   viewport={{ once: true }}
+//   transition={{ duration: 0.6, delay: index * 0.2 }}
+//   className="h-full rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-md p-12 text-left education-card"
+// >
+
+<motion.div
+  key={index}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: index * 0.2 }}
+  className="h-full rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-md p-12 text-left about-card"
+>
+
+
               <h3 className="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-indigo-600 to-blue-500">
                 {edu.degree}
               </h3>
@@ -86,3 +105,6 @@ export default function Education() {
     </section>
   );
 }
+
+
+
