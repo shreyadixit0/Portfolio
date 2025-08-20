@@ -18,9 +18,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row items-center px-8 py-10">
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-indigo-600 to-blue-500">
-            Hello, I'm Shreya Dixit
-          </h1>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-indigo-600 to-blue-500"> Hello, I'm Shreya Dixit </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-base-content max-w-xl">
             A passionate{" "}
@@ -46,9 +44,9 @@ export default function Hero() {
               smooth={true}
               duration={500}
               offset={-80}
-              className="px-6 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-700 hover:text-white transition cursor-pointer"
-            >
+              className="px-6 py-2 rounded-full border border-indigo-600 text-indigo-600 hover:bg-indigo-700 hover:text-white transition cursor-pointer" > 
               View Projects
+
             </Link>
           </div>
         </div>

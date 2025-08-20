@@ -47,7 +47,7 @@ export default function Projects() {
                 className="rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-md p-10 justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-indigo-600 to-blue-500">
+                  <h3 className="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-indigo-400">
                     {project.title}
                   </h3>
                   <p className="text-sm text-white-700 mb-4">
